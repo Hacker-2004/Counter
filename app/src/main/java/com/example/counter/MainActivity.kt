@@ -1,5 +1,6 @@
 package com.example.counter
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CounterTheme {
+            CounterTheme (dynamicColor = false){
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Counter(
                         name = "Android",
